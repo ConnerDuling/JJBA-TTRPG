@@ -141,3 +141,44 @@ function rollItemMacro(itemUuid) {
     item.roll();
   });
 }
+
+// Utility function to get Stand Parameter
+function getStandParameterValues() {
+  const parameterTable = [
+    {
+      "Index": 0,
+      "Rank": "E",
+      "Description" : "Pitiful",
+      "Dice": "1d6",
+      "Modifier": -5
+    },
+    {
+      "Index": 1,
+      "Rank": "D",
+      "Description" : "Weak",
+      "Dice": "2d6kh1",
+      "Modifier": -3
+    },
+    {
+      "Index": 2,
+      "Rank": "C",
+      "Description" : "Average",
+      "Dice": "2d6",
+      "Modifier": +1
+    },
+    {
+      "Index": 3,
+      "Rank": "B",
+      "Description" : "Good",
+      "Dice": "3d6kh2",
+      "Modifier": +3
+    },
+    {
+      "Index": 4,
+      "Rank": "A",
+      "Description" : "Exceptional",
+      "Dice": "3d6",
+      "Modifier": +5
+    }
+  ]
+}

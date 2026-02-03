@@ -21,12 +21,46 @@
     "playerCharacter": {
         "templates": ["base"]
       },
-      "enemyStandUser": {
+    "enemyStandUser": {
         "templates": ["base"],
         "Bizarre Points": {
           "min": 0
         }
+      },
+    "stand": {
+      "parameters":{
+        "power":{
+          "value": 2,
+          "min": 0,
+          "max": 4
+        },
+        "speed":{
+          "value": 2,
+          "min": 0,
+          "max": 4
+        },
+        "range":{
+          "value": 2,
+          "min": 0,
+          "max": 4
+        },
+        "durability":{
+          "value": 2,
+          "min": 0,
+          "max": 4
+        },
+        "precision":{
+          "value": 2,
+          "min": 0,
+          "max": 4
+        },
+        "learning":{
+          "value": 2,
+          "min": 0,
+          "max": 4
+        }
       }
+    }
     }
   ,
   "Item": {
