@@ -1,15 +1,11 @@
 {
   "id": "jjba-ttrpg",
   "title": "Jojo's Bizzare Adventure Tabletop Roleplaying Game",
-  "description": "The Jojo's Bizzare Adventure Tabletop Roleplaying Game system for FoundryVTT!",
+  "description": "A system for the Jojo's Bizzare Adventure Tabletop Roleplaying Game by Christian Sibbitt.",
   "authors": [
     {
-      "name": "Asacolips",
-      "discord": "asacolips"
-    },
-    {
-      "name": "Lee Talman",
-      "discord": ".pizzaWizard"
+      "name": "Conner Duling",
+      "discord": ""
     }
   ],
   "url": "Replace this with a link to your public repository",
@@ -24,10 +20,10 @@
       "thumbnail": "systems/jjba-ttrpg/assets/anvil-impact.png"
     }
   ],
-  "version": "2.0.0",
+  "version": "0.0.1",
   "compatibility": {
-    "minimum": 11,
-    "verified": "11.315"
+    "minimum": 12,
+    "verified": "12.343"
   },
   "esmodules": ["module/jjba-ttrpg.mjs"],
   "styles": ["css/jjba-ttrpg.css"],
@@ -44,8 +40,10 @@
   "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
   "download": "This must link to a .zip file of the current version",
   "background": "systems/jjba-ttrpg/assets/anvil-impact.png",
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "grid":{
+    "distance": 5,
+    "units": "ft"
+  },
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power"
 }
