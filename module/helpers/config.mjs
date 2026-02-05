@@ -4,20 +4,20 @@ export const JJBA_TTRPG = {};
  * The set of Ability Scores used within the system.
  * @type {Object}
  */
-JJBA_TTRPG.abilities = {
-  str: 'JJBA_TTRPG.Ability.Str.long',
-  dex: 'JJBA_TTRPG.Ability.Dex.long',
-  con: 'JJBA_TTRPG.Ability.Con.long',
-  int: 'JJBA_TTRPG.Ability.Int.long',
-  wis: 'JJBA_TTRPG.Ability.Wis.long',
-  cha: 'JJBA_TTRPG.Ability.Cha.long',
+JJBA_TTRPG.standParameters = {
+  pow: 'JJBA_TTRPG.Ability.POW.long',
+  spd: 'JJBA_TTRPG.Ability.SPD.long',
+  rng: 'JJBA_TTRPG.Ability.RNG.long',
+  dur: 'JJBA_TTRPG.Ability.DUR.long',
+  prec: 'JJBA_TTRPG.Ability.PREC.long',
+  lrn: 'JJBA_TTRPG.Ability.LRN.long',
 };
 
-JJBA_TTRPG.abilityAbbreviations = {
-  str: 'JJBA_TTRPG.Ability.Str.abbr',
-  dex: 'JJBA_TTRPG.Ability.Dex.abbr',
-  con: 'JJBA_TTRPG.Ability.Con.abbr',
-  int: 'JJBA_TTRPG.Ability.Int.abbr',
-  wis: 'JJBA_TTRPG.Ability.Wis.abbr',
-  cha: 'JJBA_TTRPG.Ability.Cha.abbr',
+JJBA_TTRPG.standParametersAbbreviations = {
+  pow: 'JJBA_TTRPG.Ability.POW.abbr',
+  spd: 'JJBA_TTRPG.Ability.SPD.abbr',
+  rng: 'JJBA_TTRPG.Ability.RNG.abbr',
+  dur: 'JJBA_TTRPG.Ability.DUR.abbr',
+  prec: 'JJBA_TTRPG.Ability.PREC.abbr',
+  lrn: 'JJBA_TTRPG.Ability.LRN.abbr',
 };
