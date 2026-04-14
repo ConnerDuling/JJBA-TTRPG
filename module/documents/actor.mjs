@@ -35,30 +35,37 @@ export class JJBAActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareCharacterData(actorData);
-    this._prepareNpcData(actorData);
+    this._prepareStandData(actorData);
   }
 
   /**
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character') return;
+    if (!(actorData.type == 'playerCharacter'
+      || actorData.type == 'enemyStandUser')) return;
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
+    const statistics = ['brains','brawns','bravery']
+    const resources = ['plot','health','resolve']
 
-    // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(systemData.abilities)) {
-      // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor((ability.value - 10) / 2);
+    for (let i = 0; i < statistics.length; i++) {
+      systemData[statistics[i]].value = Math.min(Math.max(systemData[statistics[i]].value, systemData[statistics[i]].min), systemData[statistics[i]].max)
     }
+
+    for (let i = 0; i < statistics.length; i++) {
+      if (resources[i] == "health") continue;
+      systemData[resources[i]].max = systemData[statistics[i]].value;
+    }
+
   }
 
   /**
    * Prepare NPC type specific data.
    */
-  _prepareNpcData(actorData) {
-    if (actorData.type !== 'npc') return;
+  _prepareStandData(actorData) {
+    if (actorData.type !== 'stand') return;
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;

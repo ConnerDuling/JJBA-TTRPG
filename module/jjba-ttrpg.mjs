@@ -143,7 +143,7 @@ function rollItemMacro(itemUuid) {
 }
 
 // Utility function to get Stand Parameter
-function getStandParameterValues() {
+function getStandParameterValues(index, field) {
   const parameterTable = [
     {
       "Index": 0,
@@ -181,4 +181,7 @@ function getStandParameterValues() {
       "Modifier": +5
     }
   ]
+  
+
+  return parameterTable[index][field]
 }
