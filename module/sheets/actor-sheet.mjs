@@ -193,6 +193,38 @@ export class JJBAActorSheet extends ActorSheet {
         li.addEventListener('dragstart', handler, false);
       });
     }
+
+    // Character sheet specific listeners
+    html.find('#brains-roll-button').click(this._onRollBrains.bind(this));
+    html.find('#brawns-roll-button').click(this._onRollBrawns.bind(this));
+    html.find('#bravery-roll-button').click(this._onRollBravery.bind(this));
+  }
+
+  _onRollBrains(event){
+    this._rollBaseCharacterStatistics('brains');
+  }
+
+  _onRollBrawns(event){
+    this._rollBaseCharacterStatistics('brawns');
+  }
+
+  _onRollBravery(event){
+    this._rollBaseCharacterStatistics('bravery');
+  }
+
+  async _rollBaseCharacterStatistics(statistic){
+    /** Can add in conditional checks for character types that modify base
+     * character statistics rolls like Hamon User's Exploding Energy boon
+     * later in development.
+    */
+    const message = statistic.charAt(0).toUpperCase() + statistic.slice(1) + " Roll";
+    const formula = '1d6+' + this.object.system[statistic].value
+    let roll;
+    roll = await new Roll(formula).roll();
+    roll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      flavor: message
+    });
   }
 
   /**
