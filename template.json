@@ -2,27 +2,29 @@
   "Actor": {
     "types": ["playerCharacter", "stand", "enemyStandUser"],
     "templates": {
-      "base": {
+      "baseCharacter": {
         "brains": {
-          "value": 10,
-          "min": 0,
+          "value": 3,
+          "min": 1,
           "max": 5
         },
         "brawns": {
-          "min": 0,
+          "value": 3,
+          "min": 1,
           "max": 5
         },
         "bravery": {
-          "min": 0,
+          "value": 3,
+          "min": 1,
           "max": 5
         }
       }
     },
     "playerCharacter": {
-        "templates": ["base"]
+        "templates": ["baseCharacter"]
       },
     "enemyStandUser": {
-        "templates": ["base"],
+        "templates": ["baseCharacter"],
         "Bizarre Points": {
           "min": 0
         }
@@ -80,8 +82,7 @@
       "templates": ["base"]
     },
     "characterTraitTier": {
-      "templates": ["base"],
-      "spellLevel": 1
+      "templates": ["base"]
     }
   }
 }
