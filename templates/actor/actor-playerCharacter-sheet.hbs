@@ -65,21 +65,20 @@
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.power.value" class="resource-label">Power</label>
+          <label for="system.resolve.value" class="resource-label">Resolve</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
+          <input type="text" name="system.resolve.value" value="{{system.resolve.value}}" data-dtype="Number"/>
           <span> / </span>
-          <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+          <input type="text" name="system.resolve.max" value="{{system.resolve.max}}" data-dtype="Number"/>
           </div>
         </div>
 
-        <div class="resource flex-group-center">
+        {{!-- <div class="resource flex-group-center">
           <label for="system.attributes.level.value" class="resource-label">Level</label>
           <div class="resource-content flexrow flex-center flex-between">
           <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
           </div>
-        </div>
-
+        </div> --}}
       </div>
     </div>
   </header>
@@ -87,11 +86,11 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="features">Features</a>
+    {{!-- <a class="item" data-tab="features">Features</a> --}}
     <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="items">Items</a>
-    <a class="item" data-tab="spells">Spells</a>
-    <a class="item" data-tab="effects">Effects</a>
+    <a class="item" data-tab="inventory">Inventory</a>
+    <a class="item" data-tab="secretActions">Secret Actions</a>
+    <a class="item" data-tab="traitsFlawsConditions">Traits, Flaws & Conditions</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -127,10 +126,109 @@
 
     {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="description">
+      <div class="grid grid-2col">
+        <div class="resource-content flexrow flex-between">
+          <label for="system.age">Age</label>
+          <input type="text" name="system.age" value="{{system.age}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.nationality">Nationality</label>
+          <input type="text" name="system.nationality" value="{{system.nationality}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.birthday">Birthday</label>
+          <input type="text" name="system.birthday" value="{{system.birthday}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.eyeColor">Eye Color</label>
+          <input type="text" name="system.eyeColor" value="{{system.eyeColor}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.zodiacSign">Zodiac Sign</label>
+          <input type="text" name="system.zodiacSign" value="{{system.zodiacSign}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.favoriteMovie">Favorite Movie</label>
+          <input type="text" name="system.favoriteMovie" value="{{system.favoriteMovie}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.gender">Gender</label>
+          <input type="text" name="system.gender" value="{{system.gender}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.favoriteFood">Favorite Food</label>
+          <input type="text" name="system.favoriteFood" value="{{system.favoriteFood}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.height">Height</label>
+          <input type="text" name="system.height" value="{{system.height}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.favoriteActor">Favorite Actor</label>
+          <input type="text" name="system.favoriteActor" value="{{system.favoriteActor}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.weight">Weight</label>
+          <input type="text" name="system.weight" value="{{system.weight}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.favoriteMusician">Favorite Musician</label>
+          <input type="text" name="system.favoriteMusician" value="{{system.favoriteMusician}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.bloodType">Blood Type</label>
+          <input type="text" name="system.bloodType" value="{{system.bloodType}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.favoriteAthlete">Favorite Athlete</label>
+          <input type="text" name="system.favoriteAthlete" value="{{system.favoriteAthlete}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <label for="system.occupation">Occupation</label>
+          <input type="text" name="system.occupation" value="{{system.occupation}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource-content flexrow flex-between">
+          <input type="text" name="system.freeInput" value="{{system.freeInput}}" data-dtype="String" placeholder="Free Input"/>
+          <input type="text" name="system.freeInputValue" value="{{system.freeInputValue}}" data-dtype="String"/>
+        </div>
+          
+      </div>
       {{!-- Editors must receive enriched text data from getData to properly handle rolls --}}
-      {{editor enrichedBiography target="system.biography" engine="prosemirror" button=true editable=editable}}
+      {{!-- {{editor enrichedBiography target="system.biography" engine="prosemirror" button=true editable=editable}} --}}
     </div>
 
+    {{!-- Inventory Tab --}}
+    <div class="tab inventory" data-group="primary" data-tab="inventory">
+      {{!-- Editors must receive enriched text data from getData to properly handle rolls --}}
+      {{editor enrichedInventory target="system.inventory" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+    {{!-- Secret Action Tab --}}
+    <div class="tab secretActions" data-group="primary" data-tab="secretActions">
+      <div>Secret</div>
+    </div>
+
+    {{!-- Secret Action Tab --}}
+    <div class="tab traitsFlawsConditions" data-group="primary" data-tab="traitsFlawsConditions">
+
+    </div>
+
+{{!-- 
     {{!-- Owned Items Tab --}}
     <div class="tab items" data-group="primary" data-tab="items">
        {{> "systems/jjba-ttrpg/templates/actor/parts/actor-items.hbs"}}
