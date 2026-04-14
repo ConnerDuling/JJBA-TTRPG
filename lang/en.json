@@ -8,6 +8,11 @@
       "PREC": { "long": "Precision", "abbr": "prec" },
       "LRN": { "long": "Learning", "abbr": "lrn" }
     },
+    "CharacterParameters": {
+      "Brains": "Brains",
+      "Brawns": "Brawns",
+      "Bravery": "Bravery"
+    },
     "SheetLabels": {
       "Actor": "JJBA Actor Sheet",
       "Item": "JJBA Item Sheet"
